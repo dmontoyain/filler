@@ -15,6 +15,7 @@
 
 # include "libft.h"
 # include <fcntl.h>
+# include "mlx.h"
 # define RED 0xFF4040
 # define YELLOW 0xFFBA00
 # define GRAY 0xCCCCCC

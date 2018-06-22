@@ -34,7 +34,7 @@ OK_STR = $(GREEN)[OK]$(NO_COLOR)
 
 LIB = libft/
 MLX = mlx/
-INCL = -I $(LIB)inc/ -I inc/
+INCL = -I $(LIB)inc/ -I inc/ -I $(MLX)
 LIBRARIES = $(LIB)libft.a $(MLX)libmlx.a
 FRAMEWORK = -framework OpenGL -framework AppKit
 C_FILES = $(addprefix src/, $(addsuffix .c, $(FUNCTIONS)))
@@ -45,9 +45,9 @@ all: $(NAME)
 
 $(NAME):
 
-	@echo "$(PREP_STR)"
 	@$(MAKE) -C $(LIB)
-	$(CC) $(FLAGS) $(INCL) $(C_FILES) $(LIBRARIES) -o $(NAME)
+	@echo "$(PREP_STR)"
+	@$(CC) $(FLAGS) $(INCL) $(C_FILES) $(LIBRARIES) $(FRAMEWORK) -o $(NAME)
 	@echo "$(PROJECT) Complete! $(NAME)...$(OK_STR)"
 
 clean:
