@@ -13,9 +13,8 @@
 #ifndef FILLER_H
 # define FILLER_H
 
-# include "libft/libft.h"
+# include "libft.h"
 # include <fcntl.h>
-# include "mlx/mlx.h"
 # define RED 0xFF4040
 # define YELLOW 0xFFBA00
 # define GRAY 0xCCCCCC
